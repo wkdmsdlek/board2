@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>게시물 상세 내용</title>
+  <style>
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: pink;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<h1>게시물 상세 내용</h1>
+
+<div th:if="${board}">
+  <h2 th:text="${board.title}"></h2>
+  <p>작성자: <span th:text="${board.author}"></span></p>
+  <p>내용: <span th:text="${board.content}"></span></p>
+</div>
+
+<a href="/list" class="btn">목록으로 돌아가기</a>
+
+</body>
+</html>
+
