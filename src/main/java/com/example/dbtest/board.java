@@ -1,5 +1,6 @@
 package com.example.dbtest;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class board {
 
     @Column(name = "content", nullable = false)
     private String content;
+
 
     @Column(name = "board_time")
     private LocalDateTime boardTime;
